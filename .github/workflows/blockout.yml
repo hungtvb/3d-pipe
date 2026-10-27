@@ -1,0 +1,37 @@
+name: 3D Pipe - Manifest to GLB
+on:
+  push:
+    paths:
+      - 'pipeline/build_blockout.py'
+      - 'examples/village-blockout/**'
+      - 'tests/test_blockout.py'
+      - '.github/workflows/blockout.yml'
+  pull_request:
+    paths:
+      - 'pipeline/build_blockout.py'
+      - 'examples/village-blockout/**'
+      - 'tests/test_blockout.py'
+      - '.github/workflows/blockout.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  blockout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test manifest compiler
+        run: python -m unittest discover -s tests -v
+      - name: Build village GLB from JSON
+        run: python -m pipeline.build_blockout --manifest examples/village-blockout/scene.json --out artifacts/village-blockout.glb
+      - name: Structural QA with scene budget
+        run: python -m pipeline.glb_gate audit --file artifacts/village-blockout.glb --triangle-budget 2500 --out artifacts/village-audit.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: village-blockout-glb
+          path: artifacts/
+          if-no-files-found: error
