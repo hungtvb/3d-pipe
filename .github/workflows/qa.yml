@@ -1,0 +1,28 @@
+name: 3D Pipe - Structural GLB Gate
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  structural:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run deterministic GLB validation tests
+        run: python -m unittest discover -s tests -v
+      - name: Produce procedural smoke-test GLB
+        run: python -m pipeline.glb_gate make-fixture --file artifacts/smoke.glb
+      - name: Audit GLB
+        run: python -m pipeline.glb_gate audit --file artifacts/smoke.glb --out artifacts/audit.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: glb-structural-qa
+          path: artifacts/
+          if-no-files-found: error
