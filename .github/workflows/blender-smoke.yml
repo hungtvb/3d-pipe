@@ -22,7 +22,7 @@ jobs:
       - name: Install Blender
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y blender
+          sudo apt-get install -y blender python3-numpy
           blender --background --version | head -5
       - name: Render in native Blender Cycles
         run: blender -b --factory-startup --python pipeline/blender_smoke.py -- --input artifacts/smoke.glb --output artifacts/blender --samples 8
