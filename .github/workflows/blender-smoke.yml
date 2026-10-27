@@ -1,0 +1,47 @@
+name: 3D Pipe - Native Blender Smoke
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'pipeline/blender_smoke.py'
+      - '.github/workflows/blender-smoke.yml'
+      - 'pipeline/glb_gate.py'
+permissions:
+  contents: read
+jobs:
+  cycles-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Generate deterministic smoke model
+        run: python -m pipeline.glb_gate make-fixture --file artifacts/smoke.glb
+      - name: Install Blender
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y blender
+          blender --background --version | head -5
+      - name: Render in native Blender Cycles
+        run: blender -b --factory-startup --python pipeline/blender_smoke.py -- --input artifacts/smoke.glb --output artifacts/blender --samples 8
+      - name: Validate image and blend evidence
+        run: |
+          python - <<'PY'
+          import json, struct, pathlib
+          root=pathlib.Path("artifacts/blender")
+          png=(root/"render.png").read_bytes()
+          assert png[:8] == b"\x89PNG\r\n\x1a\n", "Invalid PNG magic"
+          assert struct.unpack(">II", png[16:24]) == (400, 300)
+          assert (root/"smoke.blend").stat().st_size > 1024
+          report=json.loads((root/"report.json").read_text())
+          assert report["meshes"] >= 1 and report["renderer"] == "CYCLES"
+          print("Native Blender outputs verified:", report)
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: blender-native-smoke
+          path: artifacts/blender/
+          if-no-files-found: ignore
