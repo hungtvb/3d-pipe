@@ -42,6 +42,19 @@ class MeshBatch:
         self.normals.extend((normal,)*4)
         self.indices.extend((base, base+1, base+2, base, base+2, base+3))
 
+    def tri(self, a, b, c):
+        ux, uy, uz = (b[i] - a[i] for i in range(3))
+        vx, vy, vz = (c[i] - a[i] for i in range(3))
+        n = [uy*vz-uz*vy, uz*vx-ux*vz, ux*vy-uy*vx]
+        mag = math.sqrt(sum(x*x for x in n))
+        if mag < 1e-9:
+            raise ValueError("Degenerate triangle in manifest")
+        normal = tuple(x / mag for x in n)
+        base = len(self.vertices)
+        self.vertices.extend((tuple(a), tuple(b), tuple(c)))
+        self.normals.extend((normal,)*3)
+        self.indices.extend((base, base+1, base+2))
+
     def box(self, center, size):
         x, y, z = center
         w, h, d = (v/2 for v in size)
@@ -67,10 +80,9 @@ class MeshBatch:
         ri0=(x1,y,z0); ri1=(x1,y,z1)
         self.quad(le0,le1,ridge1,ridge0)
         self.quad(ridge0,ridge1,ri1,ri0)
-        # Cover front/back with triangle polygons represented as 3-index triangles
-        # by using an extra midpoint on each eave.
-        self.quad(le0,ridge0,ri0, (x,y,z0))
-        self.quad(ri1,ridge1,le1, (x,y,z1))
+        # Cap triangular gables with real triangle topology, no degenerate faces.
+        self.tri(le0,ridge0,ri0)
+        self.tri(ri1,ridge1,le1)
 
     def encoded(self):
         if not self.vertices or not self.indices:
