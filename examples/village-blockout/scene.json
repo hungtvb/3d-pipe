@@ -1,0 +1,1194 @@
+{
+  "schema_version": "1.0",
+  "name": "hon-tranh-reference-blockout",
+  "units": "metres",
+  "coordinate_system": "Y-up",
+  "notes": "New minimal reference blockout, not the v0.5 asset.",
+  "objects": [
+    {
+      "name": "ground",
+      "kind": "box",
+      "material": "earth",
+      "center": [
+        0,
+        -0.28,
+        0
+      ],
+      "size": [
+        54,
+        0.5,
+        44
+      ]
+    },
+    {
+      "name": "main courtyard",
+      "kind": "box",
+      "material": "stone",
+      "center": [
+        0,
+        0.02,
+        7
+      ],
+      "size": [
+        19,
+        0.2,
+        14
+      ]
+    },
+    {
+      "name": "slab_-8_2",
+      "kind": "box",
+      "material": "stone",
+      "center": [
+        -8,
+        0.13,
+        2
+      ],
+      "size": [
+        3.7,
+        0.06,
+        3.7
+      ]
+    },
+    {
+      "name": "slab_-8_6",
+      "kind": "box",
+      "material": "stone",
+      "center": [
+        -8,
+        0.13,
+        6
+      ],
+      "size": [
+        3.7,
+        0.06,
+        3.7
+      ]
+    },
+    {
+      "name": "slab_-8_10",
+      "kind": "box",
+      "material": "stone",
+      "center": [
+        -8,
+        0.13,
+        10
+      ],
+      "size": [
+        3.7,
+        0.06,
+        3.7
+      ]
+    },
+    {
+      "name": "slab_-4_2",
+      "kind": "box",
+      "material": "stone",
+      "center": [
+        -4,
+        0.13,
+        2
+      ],
+      "size": [
+        3.7,
+        0.06,
+        3.7
+      ]
+    },
+    {
+      "name": "slab_-4_6",
+      "kind": "box",
+      "material": "stone",
+      "center": [
+        -4,
+        0.13,
+        6
+      ],
+      "size": [
+        3.7,
+        0.06,
+        3.7
+      ]
+    },
+    {
+      "name": "slab_-4_10",
+      "kind": "box",
+      "material": "stone",
+      "center": [
+        -4,
+        0.13,
+        10
+      ],
+      "size": [
+        3.7,
+        0.06,
+        3.7
+      ]
+    },
+    {
+      "name": "slab_0_2",
+      "kind": "box",
+      "material": "stone",
+      "center": [
+        0,
+        0.13,
+        2
+      ],
+      "size": [
+        3.7,
+        0.06,
+        3.7
+      ]
+    },
+    {
+      "name": "slab_0_6",
+      "kind": "box",
+      "material": "stone",
+      "center": [
+        0,
+        0.13,
+        6
+      ],
+      "size": [
+        3.7,
+        0.06,
+        3.7
+      ]
+    },
+    {
+      "name": "slab_0_10",
+      "kind": "box",
+      "material": "stone",
+      "center": [
+        0,
+        0.13,
+        10
+      ],
+      "size": [
+        3.7,
+        0.06,
+        3.7
+      ]
+    },
+    {
+      "name": "slab_4_2",
+      "kind": "box",
+      "material": "stone",
+      "center": [
+        4,
+        0.13,
+        2
+      ],
+      "size": [
+        3.7,
+        0.06,
+        3.7
+      ]
+    },
+    {
+      "name": "slab_4_6",
+      "kind": "box",
+      "material": "stone",
+      "center": [
+        4,
+        0.13,
+        6
+      ],
+      "size": [
+        3.7,
+        0.06,
+        3.7
+      ]
+    },
+    {
+      "name": "slab_4_10",
+      "kind": "box",
+      "material": "stone",
+      "center": [
+        4,
+        0.13,
+        10
+      ],
+      "size": [
+        3.7,
+        0.06,
+        3.7
+      ]
+    },
+    {
+      "name": "slab_8_2",
+      "kind": "box",
+      "material": "stone",
+      "center": [
+        8,
+        0.13,
+        2
+      ],
+      "size": [
+        3.7,
+        0.06,
+        3.7
+      ]
+    },
+    {
+      "name": "slab_8_6",
+      "kind": "box",
+      "material": "stone",
+      "center": [
+        8,
+        0.13,
+        6
+      ],
+      "size": [
+        3.7,
+        0.06,
+        3.7
+      ]
+    },
+    {
+      "name": "slab_8_10",
+      "kind": "box",
+      "material": "stone",
+      "center": [
+        8,
+        0.13,
+        10
+      ],
+      "size": [
+        3.7,
+        0.06,
+        3.7
+      ]
+    },
+    {
+      "name": "shrine foundation",
+      "kind": "box",
+      "material": "stone",
+      "center": [
+        0,
+        0.58,
+        -8
+      ],
+      "size": [
+        16,
+        1.1,
+        12
+      ]
+    },
+    {
+      "name": "inner shrine body",
+      "kind": "box",
+      "material": "plaster",
+      "center": [
+        0,
+        3.75,
+        -8
+      ],
+      "size": [
+        11,
+        5.6,
+        7.9
+      ]
+    },
+    {
+      "name": "shrine roof",
+      "kind": "gable_roof",
+      "material": "roof",
+      "center": [
+        0,
+        6.3,
+        -8
+      ],
+      "size": [
+        15.5,
+        2.2,
+        11.6
+      ]
+    },
+    {
+      "name": "front entrance door",
+      "kind": "box",
+      "material": "wood",
+      "center": [
+        0,
+        3.4,
+        -3.92
+      ],
+      "size": [
+        3.3,
+        4,
+        0.2
+      ]
+    },
+    {
+      "name": "door ornament",
+      "kind": "box",
+      "material": "brass",
+      "center": [
+        0,
+        4.4,
+        -3.75
+      ],
+      "size": [
+        2.2,
+        0.28,
+        0.18
+      ]
+    },
+    {
+      "name": "post_-6.5",
+      "kind": "box",
+      "material": "wood",
+      "center": [
+        -6.5,
+        3.34,
+        -2.7
+      ],
+      "size": [
+        0.42,
+        5.1,
+        0.42
+      ]
+    },
+    {
+      "name": "post base -6.5",
+      "kind": "box",
+      "material": "stone",
+      "center": [
+        -6.5,
+        0.85,
+        -2.7
+      ],
+      "size": [
+        0.72,
+        0.46,
+        0.72
+      ]
+    },
+    {
+      "name": "post_-4",
+      "kind": "box",
+      "material": "wood",
+      "center": [
+        -4,
+        3.34,
+        -2.7
+      ],
+      "size": [
+        0.42,
+        5.1,
+        0.42
+      ]
+    },
+    {
+      "name": "post base -4",
+      "kind": "box",
+      "material": "stone",
+      "center": [
+        -4,
+        0.85,
+        -2.7
+      ],
+      "size": [
+        0.72,
+        0.46,
+        0.72
+      ]
+    },
+    {
+      "name": "post_-1.5",
+      "kind": "box",
+      "material": "wood",
+      "center": [
+        -1.5,
+        3.34,
+        -2.7
+      ],
+      "size": [
+        0.42,
+        5.1,
+        0.42
+      ]
+    },
+    {
+      "name": "post base -1.5",
+      "kind": "box",
+      "material": "stone",
+      "center": [
+        -1.5,
+        0.85,
+        -2.7
+      ],
+      "size": [
+        0.72,
+        0.46,
+        0.72
+      ]
+    },
+    {
+      "name": "post_1.5",
+      "kind": "box",
+      "material": "wood",
+      "center": [
+        1.5,
+        3.34,
+        -2.7
+      ],
+      "size": [
+        0.42,
+        5.1,
+        0.42
+      ]
+    },
+    {
+      "name": "post base 1.5",
+      "kind": "box",
+      "material": "stone",
+      "center": [
+        1.5,
+        0.85,
+        -2.7
+      ],
+      "size": [
+        0.72,
+        0.46,
+        0.72
+      ]
+    },
+    {
+      "name": "post_4",
+      "kind": "box",
+      "material": "wood",
+      "center": [
+        4,
+        3.34,
+        -2.7
+      ],
+      "size": [
+        0.42,
+        5.1,
+        0.42
+      ]
+    },
+    {
+      "name": "post base 4",
+      "kind": "box",
+      "material": "stone",
+      "center": [
+        4,
+        0.85,
+        -2.7
+      ],
+      "size": [
+        0.72,
+        0.46,
+        0.72
+      ]
+    },
+    {
+      "name": "post_6.5",
+      "kind": "box",
+      "material": "wood",
+      "center": [
+        6.5,
+        3.34,
+        -2.7
+      ],
+      "size": [
+        0.42,
+        5.1,
+        0.42
+      ]
+    },
+    {
+      "name": "post base 6.5",
+      "kind": "box",
+      "material": "stone",
+      "center": [
+        6.5,
+        0.85,
+        -2.7
+      ],
+      "size": [
+        0.72,
+        0.46,
+        0.72
+      ]
+    },
+    {
+      "name": "steps_0",
+      "kind": "box",
+      "material": "stone",
+      "center": [
+        0,
+        0.39,
+        -0.8
+      ],
+      "size": [
+        8,
+        0.3,
+        1.2
+      ]
+    },
+    {
+      "name": "steps_1",
+      "kind": "box",
+      "material": "stone",
+      "center": [
+        0,
+        0.31,
+        0.30000000000000004
+      ],
+      "size": [
+        9.4,
+        0.3,
+        1.2
+      ]
+    },
+    {
+      "name": "steps_2",
+      "kind": "box",
+      "material": "stone",
+      "center": [
+        0,
+        0.23,
+        1.4000000000000001
+      ],
+      "size": [
+        10.8,
+        0.3,
+        1.2
+      ]
+    },
+    {
+      "name": "trunk_-10.2_-18",
+      "kind": "box",
+      "material": "wood",
+      "center": [
+        -10.2,
+        2,
+        -18
+      ],
+      "size": [
+        0.55,
+        4,
+        0.55
+      ]
+    },
+    {
+      "name": "crown_-10.2_-18",
+      "kind": "box",
+      "material": "foliage",
+      "center": [
+        -10.2,
+        5,
+        -18
+      ],
+      "size": [
+        3.4,
+        3.5,
+        3.4
+      ]
+    },
+    {
+      "name": "trunk_-10.2_-12",
+      "kind": "box",
+      "material": "wood",
+      "center": [
+        -10.2,
+        2,
+        -12
+      ],
+      "size": [
+        0.55,
+        4,
+        0.55
+      ]
+    },
+    {
+      "name": "crown_-10.2_-12",
+      "kind": "box",
+      "material": "foliage",
+      "center": [
+        -10.2,
+        5,
+        -12
+      ],
+      "size": [
+        3.4,
+        3.5,
+        3.4
+      ]
+    },
+    {
+      "name": "trunk_-10.2_-6",
+      "kind": "box",
+      "material": "wood",
+      "center": [
+        -10.2,
+        2,
+        -6
+      ],
+      "size": [
+        0.55,
+        4,
+        0.55
+      ]
+    },
+    {
+      "name": "crown_-10.2_-6",
+      "kind": "box",
+      "material": "foliage",
+      "center": [
+        -10.2,
+        5,
+        -6
+      ],
+      "size": [
+        3.4,
+        3.5,
+        3.4
+      ]
+    },
+    {
+      "name": "trunk_-10.2_0",
+      "kind": "box",
+      "material": "wood",
+      "center": [
+        -10.2,
+        2,
+        0
+      ],
+      "size": [
+        0.55,
+        4,
+        0.55
+      ]
+    },
+    {
+      "name": "crown_-10.2_0",
+      "kind": "box",
+      "material": "foliage",
+      "center": [
+        -10.2,
+        5,
+        0
+      ],
+      "size": [
+        3.4,
+        3.5,
+        3.4
+      ]
+    },
+    {
+      "name": "trunk_-10.2_6",
+      "kind": "box",
+      "material": "wood",
+      "center": [
+        -10.2,
+        2,
+        6
+      ],
+      "size": [
+        0.55,
+        4,
+        0.55
+      ]
+    },
+    {
+      "name": "crown_-10.2_6",
+      "kind": "box",
+      "material": "foliage",
+      "center": [
+        -10.2,
+        5,
+        6
+      ],
+      "size": [
+        3.4,
+        3.5,
+        3.4
+      ]
+    },
+    {
+      "name": "trunk_-10.2_12",
+      "kind": "box",
+      "material": "wood",
+      "center": [
+        -10.2,
+        2,
+        12
+      ],
+      "size": [
+        0.55,
+        4,
+        0.55
+      ]
+    },
+    {
+      "name": "crown_-10.2_12",
+      "kind": "box",
+      "material": "foliage",
+      "center": [
+        -10.2,
+        5,
+        12
+      ],
+      "size": [
+        3.4,
+        3.5,
+        3.4
+      ]
+    },
+    {
+      "name": "trunk_-10.2_18",
+      "kind": "box",
+      "material": "wood",
+      "center": [
+        -10.2,
+        2,
+        18
+      ],
+      "size": [
+        0.55,
+        4,
+        0.55
+      ]
+    },
+    {
+      "name": "crown_-10.2_18",
+      "kind": "box",
+      "material": "foliage",
+      "center": [
+        -10.2,
+        5,
+        18
+      ],
+      "size": [
+        3.4,
+        3.5,
+        3.4
+      ]
+    },
+    {
+      "name": "trunk_10.2_-18",
+      "kind": "box",
+      "material": "wood",
+      "center": [
+        10.2,
+        2,
+        -18
+      ],
+      "size": [
+        0.55,
+        4,
+        0.55
+      ]
+    },
+    {
+      "name": "crown_10.2_-18",
+      "kind": "box",
+      "material": "foliage",
+      "center": [
+        10.2,
+        5,
+        -18
+      ],
+      "size": [
+        3.4,
+        3.5,
+        3.4
+      ]
+    },
+    {
+      "name": "trunk_10.2_-12",
+      "kind": "box",
+      "material": "wood",
+      "center": [
+        10.2,
+        2,
+        -12
+      ],
+      "size": [
+        0.55,
+        4,
+        0.55
+      ]
+    },
+    {
+      "name": "crown_10.2_-12",
+      "kind": "box",
+      "material": "foliage",
+      "center": [
+        10.2,
+        5,
+        -12
+      ],
+      "size": [
+        3.4,
+        3.5,
+        3.4
+      ]
+    },
+    {
+      "name": "trunk_10.2_-6",
+      "kind": "box",
+      "material": "wood",
+      "center": [
+        10.2,
+        2,
+        -6
+      ],
+      "size": [
+        0.55,
+        4,
+        0.55
+      ]
+    },
+    {
+      "name": "crown_10.2_-6",
+      "kind": "box",
+      "material": "foliage",
+      "center": [
+        10.2,
+        5,
+        -6
+      ],
+      "size": [
+        3.4,
+        3.5,
+        3.4
+      ]
+    },
+    {
+      "name": "trunk_10.2_0",
+      "kind": "box",
+      "material": "wood",
+      "center": [
+        10.2,
+        2,
+        0
+      ],
+      "size": [
+        0.55,
+        4,
+        0.55
+      ]
+    },
+    {
+      "name": "crown_10.2_0",
+      "kind": "box",
+      "material": "foliage",
+      "center": [
+        10.2,
+        5,
+        0
+      ],
+      "size": [
+        3.4,
+        3.5,
+        3.4
+      ]
+    },
+    {
+      "name": "trunk_10.2_6",
+      "kind": "box",
+      "material": "wood",
+      "center": [
+        10.2,
+        2,
+        6
+      ],
+      "size": [
+        0.55,
+        4,
+        0.55
+      ]
+    },
+    {
+      "name": "crown_10.2_6",
+      "kind": "box",
+      "material": "foliage",
+      "center": [
+        10.2,
+        5,
+        6
+      ],
+      "size": [
+        3.4,
+        3.5,
+        3.4
+      ]
+    },
+    {
+      "name": "trunk_10.2_12",
+      "kind": "box",
+      "material": "wood",
+      "center": [
+        10.2,
+        2,
+        12
+      ],
+      "size": [
+        0.55,
+        4,
+        0.55
+      ]
+    },
+    {
+      "name": "crown_10.2_12",
+      "kind": "box",
+      "material": "foliage",
+      "center": [
+        10.2,
+        5,
+        12
+      ],
+      "size": [
+        3.4,
+        3.5,
+        3.4
+      ]
+    },
+    {
+      "name": "trunk_10.2_18",
+      "kind": "box",
+      "material": "wood",
+      "center": [
+        10.2,
+        2,
+        18
+      ],
+      "size": [
+        0.55,
+        4,
+        0.55
+      ]
+    },
+    {
+      "name": "crown_10.2_18",
+      "kind": "box",
+      "material": "foliage",
+      "center": [
+        10.2,
+        5,
+        18
+      ],
+      "size": [
+        3.4,
+        3.5,
+        3.4
+      ]
+    },
+    {
+      "name": "gate pillar -9",
+      "kind": "box",
+      "material": "wood",
+      "center": [
+        -9,
+        3.4,
+        19
+      ],
+      "size": [
+        0.9,
+        6.8,
+        0.9
+      ]
+    },
+    {
+      "name": "gate light -9",
+      "kind": "box",
+      "material": "lantern",
+      "center": [
+        -9,
+        5.1,
+        18.5
+      ],
+      "size": [
+        0.6,
+        0.9,
+        0.6
+      ]
+    },
+    {
+      "name": "gate pillar 9",
+      "kind": "box",
+      "material": "wood",
+      "center": [
+        9,
+        3.4,
+        19
+      ],
+      "size": [
+        0.9,
+        6.8,
+        0.9
+      ]
+    },
+    {
+      "name": "gate light 9",
+      "kind": "box",
+      "material": "lantern",
+      "center": [
+        9,
+        5.1,
+        18.5
+      ],
+      "size": [
+        0.6,
+        0.9,
+        0.6
+      ]
+    },
+    {
+      "name": "gate lintel",
+      "kind": "box",
+      "material": "wood",
+      "center": [
+        0,
+        7.1,
+        19
+      ],
+      "size": [
+        19,
+        1,
+        1.1
+      ]
+    },
+    {
+      "name": "gate roof",
+      "kind": "gable_roof",
+      "material": "roof",
+      "center": [
+        0,
+        7.65,
+        19
+      ],
+      "size": [
+        20,
+        1.8,
+        2.6
+      ]
+    },
+    {
+      "name": "courtyard lantern frame -4.5,2",
+      "kind": "box",
+      "material": "wood",
+      "center": [
+        -4.5,
+        2.1,
+        2
+      ],
+      "size": [
+        0.2,
+        4.2,
+        0.2
+      ]
+    },
+    {
+      "name": "courtyard lantern -4.5,2",
+      "kind": "box",
+      "material": "lantern",
+      "center": [
+        -4.5,
+        4.35,
+        2
+      ],
+      "size": [
+        0.75,
+        1,
+        0.75
+      ]
+    },
+    {
+      "name": "courtyard lantern frame -4.5,10",
+      "kind": "box",
+      "material": "wood",
+      "center": [
+        -4.5,
+        2.1,
+        10
+      ],
+      "size": [
+        0.2,
+        4.2,
+        0.2
+      ]
+    },
+    {
+      "name": "courtyard lantern -4.5,10",
+      "kind": "box",
+      "material": "lantern",
+      "center": [
+        -4.5,
+        4.35,
+        10
+      ],
+      "size": [
+        0.75,
+        1,
+        0.75
+      ]
+    },
+    {
+      "name": "courtyard lantern frame 4.5,2",
+      "kind": "box",
+      "material": "wood",
+      "center": [
+        4.5,
+        2.1,
+        2
+      ],
+      "size": [
+        0.2,
+        4.2,
+        0.2
+      ]
+    },
+    {
+      "name": "courtyard lantern 4.5,2",
+      "kind": "box",
+      "material": "lantern",
+      "center": [
+        4.5,
+        4.35,
+        2
+      ],
+      "size": [
+        0.75,
+        1,
+        0.75
+      ]
+    },
+    {
+      "name": "courtyard lantern frame 4.5,10",
+      "kind": "box",
+      "material": "wood",
+      "center": [
+        4.5,
+        2.1,
+        10
+      ],
+      "size": [
+        0.2,
+        4.2,
+        0.2
+      ]
+    },
+    {
+      "name": "courtyard lantern 4.5,10",
+      "kind": "box",
+      "material": "lantern",
+      "center": [
+        4.5,
+        4.35,
+        10
+      ],
+      "size": [
+        0.75,
+        1,
+        0.75
+      ]
+    }
+  ]
+}
