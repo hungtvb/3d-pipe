@@ -11,7 +11,7 @@ permissions:
 jobs:
   cycles-smoke:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 18
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -19,10 +19,12 @@ jobs:
           python-version: '3.12'
       - name: Generate deterministic smoke model
         run: python -m pipeline.glb_gate make-fixture --file artifacts/smoke.glb
-      - name: Install Blender
+      - name: Install pinned Blender 4.5 LTS
+        uses: bradyajohnston/setup-blender@v5
+        with:
+          version: '4.5.15'
+      - name: Confirm Blender version and Python dependencies
         run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y blender python3-numpy
           blender --background --version | head -5
       - name: Render in native Blender Cycles
         run: blender -b --factory-startup --python pipeline/blender_smoke.py -- --input artifacts/smoke.glb --output artifacts/blender --samples 8
