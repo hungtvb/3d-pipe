@@ -1,0 +1,45 @@
+name: 3D Pipe - Village Browser E2E
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'pipeline/build_blockout.py'
+      - 'pipeline/village_e2e.mjs'
+      - 'examples/village-blockout/**'
+      - '.github/workflows/village-e2e.yml'
+permissions:
+  contents: read
+jobs:
+  village-webgl-e2e:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build real GLB from scene manifest
+        run: |
+          python -m pipeline.build_blockout --manifest examples/village-blockout/scene.json --out artifacts/village-blockout.glb
+          python -m pipeline.glb_gate audit --file artifacts/village-blockout.glb --triangle-budget 2500 --out artifacts/scene-audit.json
+      - name: Install Chromium and Playwright
+        run: |
+          npm install --no-save --no-package-lock --no-audit --no-fund playwright
+          npx playwright install --with-deps chromium
+      - name: Render village and exercise camera
+        run: |
+          python3 -m http.server 8118 --bind 127.0.0.1 >/tmp/village-http.log 2>&1 &
+          for i in {1..15}; do curl -fsS http://127.0.0.1:8118/examples/village-blockout/ >/dev/null && break; sleep 1; done
+          node pipeline/village_e2e.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: village-e2e-screenshots
+          path: |
+            artifacts/village-browser/
+            artifacts/scene-audit.json
+            artifacts/village-blockout.glb
+          if-no-files-found: warn
