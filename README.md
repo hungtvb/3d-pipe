@@ -51,3 +51,29 @@ The resulting GLB is *automatically built* in [Manifest → GLB CI](https://gith
 - [Manifest blockout](https://github.com/hungtvb/3d-pipe/actions/workflows/blockout.yml): edit scene JSON → regenerate GLB → structural budget audit.
 
 Hồn Tranh v0.5 source and larger binary assets remain in the previously shared full workspace ZIP; GitHub import is still tracked in [issue #1](https://github.com/hungtvb/3d-pipe/issues/1). Do not treat generic smoke tests as Hồn Tranh E2E success.
+
+
+## First full E2E: manifest → GLB → WebGL2
+
+**[Village Browser E2E – successful run](https://github.com/hungtvb/3d-pipe/actions/runs/40608558579)**
+
+The generated village contains 79 source objects, rendered as 936 triangles grouped into 8 draw calls. CI verified actual WebGL2 output using pixel readback, checked left/right camera interaction and uploaded two screenshots, a GLB, and JSON audit evidence. WebGL2 tests run through **SwiftShader**, not physical GPU benchmarks.
+
+- Preview source: [examples/village-blockout/index.html](examples/village-blockout/index.html)
+- Renderer: [examples/village-blockout/viewer.js](examples/village-blockout/viewer.js)
+- Playwright E2E: [pipeline/village_e2e.mjs](pipeline/village_e2e.mjs)
+- Pipeline workflow: [.github/workflows/village-e2e.yml](.github/workflows/village-e2e.yml)
+
+## Native Blender/Cycles evidence
+
+**[Blender 4.5.15 smoke PASS](https://github.com/hungtvb/3d-pipe/actions/runs/40608240607)**: actual Blender execution, a native editable `.blend` file, and a rendered 400×300 Cycles PNG verified in CI.
+
+The generated **village** now has a separate four-camera Cycles render workflow:
+[Village Blender Review](https://github.com/hungtvb/3d-pipe/actions/workflows/village-blender.yml).
+The completion status of that separate workflow must be verified in Actions.
+
+## Import remaining reference project
+
+The original Hồn Tranh v0.5 game and high-detail PBR model are **not yet committed**.
+Do not confuse the manifest-generated 936-triangle preview with the separate
+33,620-triangle Hồn Tranh shrine. [Import tracking](https://github.com/hungtvb/3d-pipe/issues/1).
